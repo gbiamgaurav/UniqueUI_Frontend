@@ -26,6 +26,15 @@ export function AuthProvider({ children }) {
       setLoading(false);
       return;
     }
+    // Skip the boot /me call if there is clearly no token/cookie — avoids
+    // a noisy 401 for first-time visitors on the landing page.
+    const hasLocalToken = !!localStorage.getItem("access_token");
+    const hasSessionCookie =
+      typeof document !== "undefined" && /(?:^|;\s*)session_token=/.test(document.cookie);
+    if (!hasLocalToken && !hasSessionCookie) {
+      setLoading(false);
+      return;
+    }
     checkAuth();
   }, [checkAuth]);
 
