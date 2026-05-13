@@ -1,0 +1,4 @@
+/* App-specific styles (most styling lives in index.css and tailwind). */
+.dot {
+  width: 6px; height: 6px; background: var(--accent); display: inline-block;
+}
