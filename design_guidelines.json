@@ -1,0 +1,129 @@
+{
+  "theme_and_archetype": {
+    "domain": "Chatbot SaaS",
+    "theme": "Dynamic (Light and Dark Mode)",
+    "archetype": "Archetype 4 (Swiss & High-Contrast) adapted for 'Editorial Tech'",
+    "vibe": "Authoritative, minimal, high-end editorial meets precise tech. Avoids standard AI aesthetics (no purple/teal, no Inter)."
+  },
+  "typography": {
+    "anti_default_rule_applied": true,
+    "strategy": "Old Money Tech / Swiss Brutalist",
+    "fonts": {
+      "headings": {
+        "family": "Cormorant Garamond",
+        "fallback": "serif",
+        "usage": "H1, H2, H3, large display numbers",
+        "weight_strategy": "Prefer font-light or font-normal to create an editorial, un-rushed feel. Use tracking-tight."
+      },
+      "body": {
+        "family": "IBM Plex Mono",
+        "fallback": "monospace",
+        "usage": "Paragraphs, labels, chat messages, UI elements",
+        "weight_strategy": "Clean, legible, tracking-normal."
+      }
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight",
+      "h3": "text-xl sm:text-2xl tracking-tight",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm tracking-wider uppercase"
+    }
+  },
+  "colors": {
+    "light_mode": {
+      "background": "#F9F8F6",
+      "surface": "#FFFFFF",
+      "text_primary": "#111111",
+      "text_secondary": "#555555",
+      "primary_accent": "#0047FF",
+      "border": "#E5E5E5",
+      "error": "#D32F2F"
+    },
+    "dark_mode": {
+      "background": "#0F1014",
+      "surface": "#16181D",
+      "text_primary": "#F5F5F7",
+      "text_secondary": "#999BA3",
+      "primary_accent": "#3366FF",
+      "border": "#262933",
+      "error": "#EF5350"
+    },
+    "rules": {
+      "contrast": "Minimum 4.5:1 for all text. Primary accent is used strictly for CTAs, active states, and focus rings. Do not use gradients.",
+      "hover_states": "Interactive elements must shift to a slightly lighter/darker hue of the active state. E.g., hover:bg-[#003BCC] in light mode."
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing. Elements must breathe.",
+    "container_padding": "p-6 to p-8 internally for all bordered containers.",
+    "grid_system": {
+      "marketing": "Asymmetric bento grids, mixing span sizes (col-span-full, col-span-4). Never fill 100% perfectly without tension.",
+      "dashboard": "Control Room Grid (Mode B). grid-cols-1 md:grid-cols-3 lg:grid-cols-4 with gap-4 or gap-6. Strict hierarchy."
+    },
+    "alignment": "Left-align paragraphs, inputs, chat bubbles (except user messages which can be right-aligned), and lists. Optical alignment prioritized over strict geometry."
+  },
+  "surface_strategies": {
+    "global_radius": "rounded-none or max rounded-sm (2px to 4px). Sharp, precise tech feel.",
+    "shadows": "Remove default shadows. Use 1px solid borders to define hierarchy instead.",
+    "nav_header": "Crystal Glassmorphism (backdrop-blur-xl bg-[#F9F8F6]/70 in light, bg-[#0F1014]/70 in dark) with a 1px delicate bottom border.",
+    "dashboard_cards": "Grid Borders (Technical Look). Flat backgrounds, 1px subtle borders. Hover states get a slight border color darkening, no shadow lift."
+  },
+  "components_and_interactions": {
+    "libraries": [
+      "shadcn/ui (heavily customized for sharp edges and typography)",
+      "lucide-react (icons, configured for 1.5 stroke width)",
+      "framer-motion (for subtle micro-interactions)"
+    ],
+    "buttons": "Sharp corners, solid colors. No gradients.",
+    "inputs": "Flat, 1px border. Focus state must use a crisp 2px primary accent ring (focus:ring-2 focus:ring-[#0047FF]).",
+    "motion": "Subtle. Fast transitions (150ms-200ms ease). No bouncy effects."
+  },
+  "pages_instructions": {
+    "landing": "Hero section must feature the minimalist architectural image. Overlay max 30% black if used as background, but preferred as an asymmetrical side-by-side or bento item. Bold H1 in Serif, Mono subtext. Clear Sign In/Up CTAs.",
+    "auth": "Single clean card, left aligned. Google OAuth button flat with a subtle border. Email/password with crisp inputs.",
+    "chat": "Left sidebar for history, border-r separated. Main area clean. Input fixed at bottom with 1px border. User message: light gray/dark gray block. Bot message: transparent block with Mono typography. Deep-link button to 'Response Detail' on hover of bot message.",
+    "response_detail": "A focused, distraction-free reading mode for a single chat response. Wide margins, large serif headings inside the response if applicable, clean mono body.",
+    "dashboard": "Bento layout. Metrics (Total chats, questions), Mini chart (use Recharts, styling with brand colors). File list must look like a precise data table.",
+    "file_upload": "Drag and drop zone with dashed border (border-dashed border-2). List of uploaded files with clear delete (trash icon) action.",
+    "profile": "Dropdown menu from navbar avatar."
+  },
+  "media": {
+    "image_urls": {
+      "hero_background": {
+        "url": "https://images.unsplash.com/photo-1622396481322-3b83d186701b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYnVpbGRpbmd8ZW58MHx8fHwxNzc4NjU5MTgx&ixlib=rb-4.1.0&q=85",
+        "description": "Minimalist white concrete building. Use for landing page hero section."
+      },
+      "sponsor_logo_1": {
+        "url": "https://images.unsplash.com/photo-1649000808933-1f4aac7cad9a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxjb21wYW55JTIwbG9nbyUyMGFic3RyYWN0JTIwaXNvbGF0ZWR8ZW58MHx8fHwxNzc4NjU5MTc2&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract logo design. Use in 'Trusted By' section on landing page."
+      },
+      "sponsor_logo_2": {
+        "url": "https://images.unsplash.com/photo-1777643825708-21fad6164f52?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxjb21wYW55JTIwbG9nbyUyMGFic3RyYWN0JTIwaXNvbGF0ZWR8ZW58MHx8fHwxNzc4NjU5MTc2&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract geometric circles logo. Use in 'Trusted By' section on landing page."
+      },
+      "user_avatar": {
+        "url": "https://images.unsplash.com/photo-1631606931376-f2845ed31d9d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc3ODY1OTE4MXww&ixlib=rb-4.1.0&q=85",
+        "description": "Professional portrait for user avatar placeholder."
+      }
+    }
+  },
+  "testing": {
+    "attributes": [
+      {"element": "theme-toggle-button", "testid": "theme-toggle"},
+      {"element": "login-email-input", "testid": "login-email"},
+      {"element": "login-password-input", "testid": "login-password"},
+      {"element": "login-submit-button", "testid": "login-submit"},
+      {"element": "oauth-google-button", "testid": "oauth-google"},
+      {"element": "chat-input-field", "testid": "chat-input"},
+      {"element": "chat-send-button", "testid": "chat-send"},
+      {"element": "sidebar-history-item", "testid": "chat-history-item"},
+      {"element": "response-detail-link", "testid": "view-response-detail"},
+      {"element": "file-upload-dropzone", "testid": "file-dropzone"},
+      {"element": "file-delete-button", "testid": "file-delete"},
+      {"element": "profile-dropdown-trigger", "testid": "profile-menu-trigger"},
+      {"element": "logout-button", "testid": "logout-button"}
+    ],
+    "rules": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case."
+  }
+}
